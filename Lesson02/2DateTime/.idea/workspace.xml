@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1b49bc36-3758-467d-a217-ae360c0cfe64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../1String/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1String/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1String/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1String/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../1String/1String.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2Contant-Enum/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2Contant-Enum/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2Contant-Enum/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2Contant-Enum/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2Contant-Enum/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2Contant-Enum/2Contant-Enum.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2Contant-Enum/src/vn/techmaster/Enum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../2Contant-Enum/src/vn/techmaster/Season.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3DateTime/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3DateTime/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3DateTime/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3DateTime/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3DateTime/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3DateTime/3DateTime.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../3DateTime/src/vn/techmaster/Formater.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4Scanner/src/vn/techmaster/BMI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4Scanner/src/vn/techmaster/FixScanner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4Scanner/src/vn/techmaster/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4Scanner/src/vn/techmaster/PrintFormat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../4Scanner/src/vn/techmaster/TypeOfPrint.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="27y0cctg21o9EDp8fRaFQfWt2gA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b49bc36-3758-467d-a217-ae360c0cfe64" name="Changes" comment="" />
+      <created>1650277101112</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650277101112</updated>
+      <workItem from="1650277102281" duration="696000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
