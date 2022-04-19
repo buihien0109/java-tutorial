@@ -1,40 +1,27 @@
 package service;
 
+import Util.Utils;
 import exception.NotFoundException;
 import model.CreateUser;
 import model.User;
+import repository.UserRepository;
+import repository.UserRepositoryImpl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
 import java.util.Random;
 
 
 public class UserServiceImpl implements UserService {
-    private List<User> users;
-    private int userIdCurrent = 0;
+    private User userCurrent = null;
     public final Random rd = new Random();
-
-    public UserServiceImpl() {
-        init();
-    }
-
-    @Override
-    public void init() {
-        users = new ArrayList<>();
-        users.add(new User(rd.nextInt(100), "hien", "hien@gmail.com", "111"));
-        users.add(new User(rd.nextInt(100), "an", "an@gmail.com", "111"));
-        users.add(new User(rd.nextInt(100), "tuan", "tuan@gmail.com", "111"));
-    }
+    private final UserRepository userRepository = new UserRepositoryImpl();
 
     @Override
     public boolean login(String username, String password) throws RuntimeException {
-        User user = findUserByUsername(username);
-
+        User user = userRepository.findUserByUsername(username);
         System.out.println(user);
 
         if (user.getPassword().equals(password)) {
-            userIdCurrent = user.getId();
+            userCurrent = user;
             return true;
         }
         throw new RuntimeException("Username or password not correct");
@@ -42,50 +29,28 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void logout() {
-        userIdCurrent = 0;
+        userCurrent = null;
+
     }
 
     @Override
     public User findUserById(int id) {
-        Optional<User> userOptional = users
-                .stream().filter(user -> user.getId() == id).findFirst();
-
-        if (userOptional.isPresent()) {
-            return userOptional.get();
-        }
-        throw new NotFoundException("Not found user with id = " + id);
+        return userRepository.findUserById(id);
     }
 
     @Override
     public User findUserByUsername(String username) {
-        Optional<User> userOptional = users
-                .stream().filter(user -> user.getUsename().equals(username)).findFirst();
-
-        if (userOptional.isPresent()) {
-            return userOptional.get();
-        }
-        throw new NotFoundException("Not found user with username = " + username);
+        return userRepository.findUserByUsername(username);
     }
 
     @Override
-    public User findUserByEmail(String email) {
-        Optional<User> userOptional = users
-                .stream().filter(user -> user.getEmail().equals(email)).findFirst();
-
-        if (userOptional.isPresent()) {
-            return userOptional.get();
-        }
-        throw new NotFoundException("Not found user with email = " + email);
-    }
-
-    @Override
-    public int getUserIdCurrent() {
-        return userIdCurrent;
+    public User getUserCurrent() {
+        return userCurrent;
     }
 
     @Override
     public void changeUserInfo(String username, String password, String email) {
-        User user = findUserById(userIdCurrent);
+        User user = userRepository.findUserById(userCurrent.getId());
         user.setUsename(username);
         user.setEmail(email);
         user.setPassword(password);
@@ -100,14 +65,27 @@ public class UserServiceImpl implements UserService {
                 .password(createUser.getPassword())
                 .build();
 
-        users.add(user);
-
-        users.forEach(System.out::println);
+        userRepository.save(user);
+        userRepository.findAllUser().forEach(System.out::println);
     }
 
     @Override
     public String forgotPassword(String email) throws NotFoundException {
-        User user = findUserByEmail(email);
+        User user = userRepository.findUserByEmail(email);
         return user.getPassword();
+    }
+
+    @Override
+    public void changePassword(String newPassword, String oldPassword) {
+        if(!userCurrent.getEmail().equals(oldPassword)) {
+            throw new RuntimeException("Mật không cũ không chính xác");
+        }
+        if(newPassword.equals(oldPassword)) {
+            throw new RuntimeException("Mật mới và mật khẩu cũ phải khác nhau");
+        }
+        if(Utils.validatePassword(newPassword)) {
+            throw new RuntimeException("Mật khẩu mới không đúng định dạng");
+        }
+        userCurrent.setPassword(newPassword);
     }
 }

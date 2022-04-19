@@ -6,7 +6,6 @@ import model.User;
 import service.UserService;
 import service.UserServiceImpl;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class UserController {
@@ -14,11 +13,11 @@ public class UserController {
     private final Scanner sc = new Scanner(System.in);
 
     public void run() {
-        handleStageLogin();
-        handleStageMain();
+        handleLoginMenu();
+        handleUserMenu();
     }
 
-    private void handleStageLogin() {
+    private void handleLoginMenu() {
         boolean isQuit = false;
         int option = 0;
 
@@ -36,8 +35,8 @@ public class UserController {
                     String password = sc.nextLine();
 
                     try {
-                        boolean isLoginSuccess = userService.login(username, password);
-                        isQuit = true;
+                        isQuit = userService.login(username, password);
+                        System.out.println("--> Đăng nhập thành công");
                     } catch (RuntimeException e) {
                         System.out.println(e.getMessage());
                     }
@@ -50,7 +49,7 @@ public class UserController {
                         username = sc.nextLine();
 
                         if (username.equals("")) {
-                            System.out.println("username không được để trống");
+                            System.out.println("--> username không được để trống");
                         }
                     } while (username.equals(""));
 
@@ -61,9 +60,9 @@ public class UserController {
                         password = sc.nextLine();
 
                         if (password.equals("")) {
-                            System.out.println("password không được để trống");
+                            System.out.println("--> password không được để trống");
                         } else if (!Utils.validatePassword(password)) {
-                            System.out.println("password không đúng định dạng");
+                            System.out.println("--> password không đúng định dạng");
                         }
                     } while (password.equals("") || !Utils.validatePassword(password));
 
@@ -74,16 +73,27 @@ public class UserController {
                         email = sc.nextLine();
 
                         if (email.equals("")) {
-                            System.out.println("email không được để trống");
+                            System.out.println("--> email không được để trống");
                         } else if (!Utils.validateEmail(email)) {
-                            System.out.println("email không đúng định dạng");
+                            System.out.println("--> email không đúng định dạng");
                         }
                     } while (email.equals("") || !Utils.validateEmail(email));
 
 
                     CreateUser createUser = new CreateUser(username, password, email);
                     userService.registerUser(createUser);
-                    System.out.println("Đăng ký thành công");
+                    System.out.println("--> Đăng ký thành công");
+                }
+                case 3 -> {
+                    System.out.print("Nhập email : ");
+                    String email = sc.nextLine();
+
+                    try {
+                        String password = userService.forgotPassword(email);
+                        System.out.println("--> Mật khẩu của bạn là : " + password);
+                    } catch (RuntimeException e) {
+                        System.out.println(e.getMessage());
+                    }
                 }
                 default -> {
                     System.out.println("Lựa chọn không chính xác");
@@ -92,8 +102,8 @@ public class UserController {
         }
     }
 
-    private void handleStageMain() {
-        User userCurrent = userService.findUserById(userService.getUserIdCurrent());
+    private void handleUserMenu() {
+        User userCurrent = userService.findUserById(userService.getUserCurrent().getId());
 
         boolean isQuit = false;
         int option = 0;
@@ -139,11 +149,7 @@ public class UserController {
     private void showLoginMenu() {
         System.out.println("1 - Đăng nhập");
         System.out.println("2 - Đăng ký");
-    }
-
-    private void showLoginFailMenu() {
-        System.out.println("1 - Đăng nhập lại");
-        System.out.println("2 - Quên mật khẩu");
+        System.out.println("3 - Quên mật khẩu");
     }
 
     private void showUserMenu(String username) {
