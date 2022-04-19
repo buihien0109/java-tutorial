@@ -1,6 +1,6 @@
 package vn.techmaster;
 
-public class TwoArray {
+public class Array2D {
     public static void main(String[] args) {
         int[][] numbers = {
                 {1, 2, 3},

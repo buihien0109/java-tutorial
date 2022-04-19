@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65d29d86-e68c-453f-9082-fb0ec999dcfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../Lesson04/1Array/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson04/1Array/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson04/1Array/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson04/1Array/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson04/1Array/src/vn/techmaster/LoopArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson04/1Array/src/vn/techmaster/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Lesson04/1Array/src/vn/techmaster/TwoArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exam2/src/main/java/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Exam2/src/main/java/repository/UserRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Lesson04/1Array/src/vn/techmaster/TwoArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Lesson04/1Array/src/vn/techmaster/Array2D.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Exam2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exam2/src/main/java/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam2/src/main/java/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exam2/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam2/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exam2/src/main/java/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam2/src/main/java/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exam2/target/classes/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam2/target/classes/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exam2/target/classes/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam2/target/classes/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Exam2/target/classes/service/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Exam2/target/classes/service/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,5 +105,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
