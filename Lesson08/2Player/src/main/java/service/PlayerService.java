@@ -14,13 +14,16 @@ public class PlayerService {
         init();
     }
 
+    // Khởi tạo danh sách cầu thủ
     private void init() {
         players = new ArrayList<>();
+        // Các cầu thủ thuộc vị trí thủ môn
         players.add(new Player(1, "Bùi Tấn Trường", Position.GK));
         players.add(new Player(1, "Đặng Văn Lâm", Position.GK));
         players.add(new Player(3, "Nguyễn Văn Hoàng", Position.GK));
         players.add(new Player(4, "Quan Văn Chuẩn", Position.GK));
 
+        // Các cầu thủ thuộc vị trí hậu vệ
         players.add(new Player(5, "Đỗ Duy Mạnh", Position.DF));
         players.add(new Player(6, "Nguyễn Thành Chung", Position.DF));
         players.add(new Player(7, "Trần Đình Trọng", Position.DF));
@@ -32,6 +35,7 @@ public class PlayerService {
         players.add(new Player(13, "Phạm Xuân Mạnh", Position.DF));
         players.add(new Player(14, "Đỗ Thanh Thịnh", Position.DF));
 
+        // Các cầu thủ thuộc vị trí tiền vệ
         players.add(new Player(15, "Nguyễn Quang Hải", Position.MF));
         players.add(new Player(16, "Phạm Đức Huy", Position.MF));
         players.add(new Player(17, "Lương Xuân Trường", Position.MF));
@@ -41,6 +45,7 @@ public class PlayerService {
         players.add(new Player(21, "Nguyễn Hoàng Đức", Position.MF));
         players.add(new Player(22, "Lý Công Hoàng Anh", Position.MF));
 
+        // Các cầu thủ thuộc vị trí tiền đạo
         players.add(new Player(23, "Phạm Tuấn Hải", Position.FW));
         players.add(new Player(24, "Nguyễn Văn Toàn", Position.FW));
         players.add(new Player(25, "Nguyễn Công Phượng", Position.FW));
@@ -48,6 +53,7 @@ public class PlayerService {
         players.add(new Player(27, "Nguyễn Tiến Linh", Position.FW));
     }
 
+    // Tạo danh sách cầu thủ với số lượng cầu thủ mỗi vị trí đã được chỉ định sẵn
     public List<Player> buildTeam(int GKNumber, int DFNumber, int MFNumber, int FWNumber) {
         List<Player> selectedTeam = new ArrayList<>();
         selectedTeam.addAll(getPlayers(Position.GK, GKNumber));
@@ -63,9 +69,13 @@ public class PlayerService {
         Random random = new Random();
         int count = 0;
 
+        // Nếu số lượng cầu thủ chưa đủ thì tiếp tục random
         while (count < number) {
+            // Random chỉ số của 1 cầu thủ bất kỳ
             int rdPlayer = random.nextInt(players.size());
 
+            // Kiểm tra xem cầu thủ tại vị trí đó
+            // Có cùng vị trí được yêu cầu hay không và đã được chọn hay chưa
             if (players.get(rdPlayer).getPosition().equals(position)
                     && !selectedPlayers.contains(players.get(rdPlayer))
             ) {
