@@ -56,7 +56,7 @@ int b = 20;
 int c = a++;
 int d = ++a;
 
-int e = a++ ++b;
+int e = a++ + ++b;
 int f = ++a + ++b;
 ```
 
