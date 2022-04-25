@@ -13,12 +13,17 @@ import java.util.Optional;
 
 public class JsonFileToObject {
     public static void main(String[] args) throws IOException {
+        // Lấy thông tin đối tượng student từ file "student.json"
         Student student = getObjectFromJsonFile("student.json");
         System.out.println(student);
 
+        // Lấy mảng đối tượng student từ file "list-student.json"
         List<Student> students = getListObjectFromJsonFile("list-student.json");
 
+        // Vì có thể list là null, nên xử lý bằng Optional
         Optional<List<Student>> studentsOptional = Optional.ofNullable(students);
+
+        // In ra thông tin từng Object trong List
         if(studentsOptional.isPresent()) {
             students.forEach(System.out::println);
         }

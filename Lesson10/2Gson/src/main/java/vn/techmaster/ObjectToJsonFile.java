@@ -18,17 +18,22 @@ public class ObjectToJsonFile {
     public static void main(String[] args) {
         // Khởi tạo Object student
         Student student = new Student(1, "Bùi Hiên", 25, "hien@techmaster.vn");
+
+        // Ghi đối tượng student vào file "student.json"
         convertObjectToJsonFile("student.json", student);
 
+        // Khởi tạo danh sách student
         List<Student> students = new ArrayList<>();
         students.add(new Student(1, "Nguyễn A", 30, "a@gmail.com"));
         students.add(new Student(2, "Ngô B", 31, "b@gmail.com"));
         students.add(new Student(3, "Trần C", 23, "c@gmail.com"));
         students.add(new Student(3, "Phan D", 26, "d@gmail.com"));
 
+        // Ghi danh sách student vào file "list-student.json"
         convertObjectToJsonFile("list-student.json", students);
     }
 
+    // Ghi Object JSON file (Object là 1 đối tượng bất kỳ)
     public static void convertObjectToJsonFile(String fileName, Object obj) {
         try {
             // Gson gson = new Gson();
