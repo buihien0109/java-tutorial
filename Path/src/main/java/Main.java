@@ -21,15 +21,18 @@ public class Main {
         File fileDownload = pathDownload.toFile();
 
         // Nếu path chưa tồn tại -> Tạo thư mục
-        if(!fileUpload.exists()) {
-            fileUpload.mkdir();
-        }
+        createFolder(pathUpload);
+        createFolder(pathDownload);
 
-        if(!fileDownload.exists()) {
-            fileDownload.mkdir();
-        }
+        // Copy ảnh
+        makePhoto("image_01", fileUpload, fileDownload);
+    }
 
-        makePhoto("image_03", fileUpload, fileDownload);
+    public static void createFolder(Path folderPath) {
+        File folder = folderPath.toFile();
+        if(!folder.exists()) {
+            folder.mkdir();
+        }
     }
 
     // Tạo 1 file với tên bất kỳ trong file download và copy từ file upload bất kỳ sang file đó
@@ -67,7 +70,7 @@ public class Main {
         BufferedOutputStream bufferedStream = new BufferedOutputStream(new FileOutputStream(newFilePath.toFile()));
 
         // Copy các byte data từ file -> fileServer
-        bufferedStream.write(Files.readAllBytes(newFilePath));
+        bufferedStream.write(Files.readAllBytes(fileRandom.toPath()));
         bufferedStream.close();
     }
 
