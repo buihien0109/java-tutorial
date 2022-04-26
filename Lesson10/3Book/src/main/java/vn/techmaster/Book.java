@@ -1,7 +1,10 @@
 package vn.techmaster;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -9,7 +12,6 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
 public class Book {
     private int id;
     private String title;
@@ -21,4 +23,14 @@ public class Book {
 
     @SerializedName("release_year")
     private int releaseYear;
+
+    @Override
+    public String toString() {
+        return "id=" + id +
+                ", title='" + title + '\'' +
+                ", category=" + category +
+                ", author='" + author + '\'' +
+                ", pageNumber=" + pageNumber +
+                ", releaseYear=" + releaseYear;
+    }
 }

@@ -1,7 +1,6 @@
 package vn.techmaster;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.Scanner;
 
 public class BookController {
@@ -30,9 +29,8 @@ public class BookController {
                     System.out.print("Nhập tên book : ");
                     String title = sc.nextLine();
 
-                    Optional<List<Book>> booksOptional = Optional.ofNullable(bookService.findByName(title));
-                    if(booksOptional.isPresent()) {
-                        List<Book> books = booksOptional.get();
+                    List<Book> books = bookService.findByName(title);
+                    if (!books.isEmpty()) {
                         books.forEach(System.out::println);
                     } else {
                         System.out.println("Không tìm thấy book với tên : " + title);
@@ -42,9 +40,8 @@ public class BookController {
                     System.out.print("Nhập danh mục : ");
                     String categoryName = sc.nextLine();
 
-                    Optional<List<Book>> booksOptional = Optional.ofNullable(bookService.findByCategory(categoryName));
-                    if(booksOptional.isPresent()) {
-                        List<Book> books = booksOptional.get();
+                    List<Book> books = bookService.findByCategory(categoryName);
+                    if (!books.isEmpty()) {
                         books.forEach(System.out::println);
                     } else {
                         System.out.println("Không tìm thấy book thuộc danh mục : " + categoryName);
@@ -52,12 +49,12 @@ public class BookController {
                 }
                 case 4 -> {
                     List<Book> books = bookService.sortByPageNumber();
-                    System.out.println("Danh sách book theo số trang tăng dần");
+                    System.out.println("Danh sách book theo số trang tăng dần : ");
                     books.forEach(System.out::println);
                 }
                 case 5 -> {
                     List<Book> books = bookService.sortByReleaseYear();
-                    System.out.println("Danh sách book theo năm xuất bản tăng dần");
+                    System.out.println("Danh sách book theo năm xuất bản tăng dần : ");
                     books.forEach(System.out::println);
                 }
                 case 6 -> {

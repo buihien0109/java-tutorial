@@ -21,6 +21,7 @@ public class BookService {
         }
     }
 
+    // Lấy dữ liệu book từ file Json
     public List<Book> getBooksFromJsonFile(String fileName) throws IOException {
         Gson gson = new Gson();
 
@@ -32,17 +33,20 @@ public class BookService {
         return books;
     }
 
+    // Lấy danh sách book
     public List<Book> getBooks() {
         return books;
     }
 
+    // Tìm kiếm book theo tiêu đề
     public List<Book> findByName(String title) {
         return books
                 .stream()
-                .filter(book -> book.getTitle().contains(title))
+                .filter(book -> book.getTitle().toLowerCase().contains(title.toLowerCase()))
                 .collect(Collectors.toList());
     }
 
+    // Tìm kiếm book theo danh mục
     public List<Book> findByCategory(String categoryName) {
         return books
                 .stream()
@@ -50,6 +54,7 @@ public class BookService {
                 .collect(Collectors.toList());
     }
 
+    // Sắp xếp book theo số trang tăng dần
     public List<Book> sortByPageNumber() {
         return books
                 .stream()
@@ -57,6 +62,7 @@ public class BookService {
                 .collect(Collectors.toList());
     }
 
+    // Sắp xếp book theo năm phát hành tăng dần
     public List<Book> sortByReleaseYear() {
         return books
                 .stream()
