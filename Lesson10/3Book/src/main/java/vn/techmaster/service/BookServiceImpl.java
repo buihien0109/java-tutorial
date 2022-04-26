@@ -1,6 +1,7 @@
-package vn.techmaster;
+package vn.techmaster.service;
 
 import com.google.gson.Gson;
+import vn.techmaster.model.Book;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -10,10 +11,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class BookService {
+public class BookServiceImpl implements BookService {
     private List<Book> books;
 
-    public BookService() {
+    public BookServiceImpl() {
         try {
             books = getBooksFromJsonFile("book.json");
         } catch (Exception e) {
@@ -22,6 +23,7 @@ public class BookService {
     }
 
     // Lấy dữ liệu book từ file Json
+    @Override
     public List<Book> getBooksFromJsonFile(String fileName) throws IOException {
         Gson gson = new Gson();
 
@@ -34,11 +36,13 @@ public class BookService {
     }
 
     // Lấy danh sách book
+    @Override
     public List<Book> getBooks() {
         return books;
     }
 
     // Tìm kiếm book theo tiêu đề
+    @Override
     public List<Book> findByName(String title) {
         return books
                 .stream()
@@ -47,6 +51,7 @@ public class BookService {
     }
 
     // Tìm kiếm book theo danh mục
+    @Override
     public List<Book> findByCategory(String categoryName) {
         return books
                 .stream()
@@ -55,6 +60,7 @@ public class BookService {
     }
 
     // Sắp xếp book theo số trang tăng dần
+    @Override
     public List<Book> sortByPageNumber() {
         return books
                 .stream()
@@ -63,6 +69,7 @@ public class BookService {
     }
 
     // Sắp xếp book theo năm phát hành tăng dần
+    @Override
     public List<Book> sortByReleaseYear() {
         return books
                 .stream()

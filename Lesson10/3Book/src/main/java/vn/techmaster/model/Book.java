@@ -1,4 +1,4 @@
-package vn.techmaster;
+package vn.techmaster.model;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.AllArgsConstructor;

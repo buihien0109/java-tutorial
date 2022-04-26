@@ -1,11 +1,15 @@
-package vn.techmaster;
+package vn.techmaster.controller;
+
+import vn.techmaster.model.Book;
+import vn.techmaster.service.BookService;
+import vn.techmaster.service.BookServiceImpl;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class BookController {
 
-    private final BookService bookService = new BookService();
+    private final BookService bookService = new BookServiceImpl();
 
     public void run() {
         Scanner sc = new Scanner(System.in);
