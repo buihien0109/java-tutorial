@@ -25,8 +25,9 @@ public class EmployeeController {
                 case 1: {
                     ArrayList<Employee> employees = employeeService.getEmployees();
                     if (employees.isEmpty()) {
-                        System.out.println("Không có nhân viên nào trong danh sách");
+                        System.out.println("Không có nhân viên nào trong danh sách!");
                     } else {
+                        System.out.println("Danh sách nhân viên : ");
                         employeeService.printInfo(employees);
                     }
                     break;
@@ -99,13 +100,13 @@ public class EmployeeController {
     }
 
     public void printMenu() {
-        System.out.println("*********** MENU ***********");
+        System.out.println("\n*********** MENU ***********");
         System.out.println("1. In thông tin của tất cả nhân viên");
         System.out.println("2. Thêm nhân viên mới");
         System.out.println("3. Tìm kiếm nhân viên theo tên");
         System.out.println("4. Tìm kiếm nhân viên theo id");
         System.out.println("5. Xóa nhân viên theo id");
         System.out.println("6. Tìm kiếm nhân viên có mức lương từ 5.000.000 -> 10.000.000");
-        System.out.println("7. Thoát");
+        System.out.println("7. Thoát\n");
     }
 }
