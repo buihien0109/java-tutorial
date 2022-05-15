@@ -1,6 +1,6 @@
 package vn.techmaster.demo_exception;
 
-public class DemoCallStackUnChecked {
+public class DemoCallStackUnchecked {
     public static void main(String[] args) {
         methodThree();
     }
@@ -19,6 +19,5 @@ public class DemoCallStackUnChecked {
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
         }
-
     }
 }
