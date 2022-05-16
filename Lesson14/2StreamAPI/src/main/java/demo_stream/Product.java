@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class Product implements Comparable<Product>{
+public class Product{
     private int id;
     private String name;
     private int price;
@@ -17,10 +17,5 @@ public class Product implements Comparable<Product>{
 
     public void printInfo() {
         System.out.println(id + " - " + name + " - " + price + " - " + brand + " - " + count);
-    }
-
-    @Override
-    public int compareTo(Product other) {
-        return name.compareTo(other.getName());
     }
 }
