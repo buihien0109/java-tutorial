@@ -1,4 +1,4 @@
-package demo_stream;
+package demo_stream.product;
 
 import lombok.*;
 
@@ -8,7 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class Product{
+public class Product {
     private int id;
     private String name;
     private int price;
