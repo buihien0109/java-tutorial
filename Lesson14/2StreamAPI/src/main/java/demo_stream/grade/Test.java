@@ -22,7 +22,7 @@ public class Test {
         students.add(new Student("Jane", 9, Gender.FEMALE));
 
         // 1. Viết function tính thứ hạng trung bình của cả lớp
-        System.out.println("\nThứ hạng trung bình cả lớp : " + studentService.getAvgStudent(students));
+        System.out.println("\nThứ hạng trung bình cả lớp : " + studentService.getAvgAllStudent(students));
 
         // 2. Viết function tính thứ hạng trung bình của nam trong lớp
         System.out.println("\nThứ hạng trung bình nam : " + studentService.getAvgStudentMale(students));

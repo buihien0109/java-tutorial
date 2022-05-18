@@ -11,11 +11,15 @@ public class Test {
         // Khởi tạo đối tượng
         JsonFileToObject jsonFileToObject = new JsonFileToObject();
 
+        // ************************************************
+
         // Lấy thông tin đối tượng student từ file "student.json"
         Student student = jsonFileToObject.getObjectFromJsonFile("student.json");
         System.out.println("Đọc thông tin từ file student.json");
         System.out.println(student);
         System.out.println();
+
+        // ************************************************
 
         // Lấy List đối tượng student từ file "list-student.json"
         List<Student> students = jsonFileToObject.getListObjectFromJsonFile("list-student.json");

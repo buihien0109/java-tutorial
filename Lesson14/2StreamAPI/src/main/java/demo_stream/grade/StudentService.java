@@ -5,11 +5,13 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class StudentService {
+    // HELPER METHOD **************************************
+    // 1. In ra thông tin trong danh sách học viên
     public void print(List<Student> students) {
         students.stream().forEach(Student::printInfo);
     }
 
-    // 1. Viết function tính thứ hạng trung bình của cả lớp
+    // 2. Viết function tính thứ hạng trung bình của một danh sách học viên
     public double getAvgStudent(List<Student> students) {
         int total = students
                 .stream()
@@ -18,7 +20,8 @@ public class StudentService {
 
         return (double) total/students.size();
     }
-    // 2. Viết function tính thứ hạng trung bình của nam trong lớp
+
+    // 3. Tìm học viên theo giới tính
     public List<Student> findStudentByGender(List<Student> students, Gender gender) {
         return students
                 .stream()
@@ -26,6 +29,30 @@ public class StudentService {
                 .collect(Collectors.toList());
     }
 
+    public List<Student> findMaxGrade(List<Student> students) {
+        return students
+                .stream()
+                .max((s1, s2) -> s1.getGrade() - s2.getGrade())
+                .stream()
+                .toList();
+    }
+
+    public List<Student> findMinGrade(List<Student> students) {
+        return students
+                .stream()
+                .min((s1, s2) -> s1.getGrade() - s2.getGrade())
+                .stream()
+                .toList();
+    }
+
+
+    // MAIN METHOD **************************************
+    // 1. Viết function tính thứ hạng trung bình của cả lớp
+    public double getAvgAllStudent(List<Student> students) {
+        return getAvgStudent(students);
+    }
+
+    // 2. Viết function tính thứ hạng trung bình của nam trong lớp
     public double getAvgStudentMale(List<Student> students) {
         List<Student> studentsMale = findStudentByGender(students, Gender.MALE);
         return getAvgStudent(studentsMale);
@@ -38,13 +65,6 @@ public class StudentService {
     }
 
     // 4. Viết function tìm học viên Nam có thứ hạng cao nhất trong lớp
-    public List<Student> findMaxGrade(List<Student> students) {
-        return students
-                .stream()
-                .max((s1, s2) -> s1.getGrade() - s2.getGrade())
-                .stream()
-                .toList();
-    }
     public List<Student> findMaxGradeMale(List<Student> students) {
         return findMaxGrade(findStudentByGender(students, Gender.MALE));
     }
@@ -55,14 +75,6 @@ public class StudentService {
     }
 
     // 6. Viết function tìm học viên Nam có thứ hạng thấp nhất trong lớp
-    public List<Student> findMinGrade(List<Student> students) {
-        return students
-                .stream()
-                .min((s1, s2) -> s1.getGrade() - s2.getGrade())
-                .stream()
-                .toList();
-    }
-
     public List<Student> findMinGradeMale(List<Student> students) {
         return findMinGrade(findStudentByGender(students, Gender.MALE));
     }
