@@ -1,4 +1,4 @@
-package list_demo;
+package demo_list;
 
 import java.util.Iterator;
 import java.util.LinkedList;
