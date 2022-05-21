@@ -34,6 +34,12 @@ public class HashMapDemo {
         // Lấy ra độ dài
         System.out.println(map.size());
 
+        // Kiểm tra 1 key có tồn tại trong hashmap hay không
+        System.out.println(map.containsKey(1));
+
+        // Kiểm tra 1 value có tồn tại trong hashmap không
+        System.out.println(map.containsValue("An"));
+
         // Thêm 1 collection khác vào trong map
         Map<Integer, String> mapOther = new HashMap<>();
         mapOther.put(5, "Vinh");
@@ -52,5 +58,18 @@ public class HashMapDemo {
 
         // Kiểm tra 1 value có tồn tại trong hashmap không
         System.out.println(hashMap.containsValue("An"));
+
+        // *********************************
+        Map<Student, Integer> studentMap = new HashMap<>();
+        studentMap.put(new Student(1, "Hiên", "hien@gmail.com"), 1);
+        studentMap.put(new Student(2, "Hiên", "hien@gmail.com"), 2);
+        studentMap.put(new Student(2, "An", "an@gmail.com"), 3);
+        studentMap.put(new Student(3, "Vinh", "vinh@gmail.com"), 4);
+
+        System.out.println("Test hashmap student");
+        Set<Student> keySet1 = studentMap.keySet(); // Lấy danh sách key
+        for (Student key : keySet1) {
+            System.out.println(key + " - " + studentMap.get(key));
+        }
     }
 }

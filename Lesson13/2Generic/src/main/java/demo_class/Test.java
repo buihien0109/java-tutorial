@@ -26,9 +26,5 @@ public class Test {
         myClass.demoMethod1(10.5);
         myClass.demoMethod1(20L);
         myClass.demoMethod1(5.3f);
-
-        // Tạo class
-        MyClassOther<Integer> myClassOther = new MyClassOther<>(1,2);
-        System.out.println(myClassOther.getNumber1() + myClassOther.getNumber2());
     }
 }

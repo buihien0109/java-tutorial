@@ -1,27 +1,23 @@
 package demo_class;
 
-public class MyClassOther<T extends Number> {
-    private T number1;
-    private T number2;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-    public MyClassOther(T number1, T number2) {
-        this.number1 = number1;
-        this.number2 = number2;
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+public class MyClassOther<T extends String> {
+    private T value;
+
+    public void add(T otherValue) {
+        System.out.println(value.concat(" ").concat(otherValue));
     }
 
-    public T getNumber1() {
-        return number1;
-    }
-
-    public void setNumber1(T number1) {
-        this.number1 = number1;
-    }
-
-    public T getNumber2() {
-        return number2;
-    }
-
-    public void setNumber2(T number2) {
-        this.number2 = number2;
+    public static void main(String[] args) {
+        MyClassOther<String> text = new MyClassOther<>("Hello");
+        text.add("world");
     }
 }

@@ -1,14 +1,16 @@
 package demo_class;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class MyClass<T>{
     private T obj;
-
-    public MyClass() {
-    }
-
-    public MyClass(T obj) {
-        this.obj = obj;
-    }
 
     // Demo Generic method
     public void demoMethod(T data) {
@@ -19,13 +21,5 @@ public class MyClass<T>{
     public <U extends Number> void demoMethod1(U data) {
         System.out.println("Demo Generic method with parameter of Number");
         System.out.println("Data : " + data);
-    }
-
-    public T getObj() {
-        return obj;
-    }
-
-    public void setObj(T obj) {
-        this.obj = obj;
     }
 }
