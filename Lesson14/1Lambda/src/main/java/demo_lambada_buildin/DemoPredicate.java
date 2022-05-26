@@ -1,6 +1,7 @@
 package demo_lambada_buildin;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -35,5 +36,24 @@ public class DemoPredicate {
 
         // Cách 3 : Sử dụng Lambda expresstion để triển khai Predicate
         names.removeIf(name -> name.equals("Hiên"));
+
+        // ************************************************
+        // Tìm số lẻ trong list
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5);
+        List<Integer> result = getNumberIsOdd(numbers, a -> a % 2 == 1);
+
+        System.out.println();
+        result.forEach(System.out::println);
+    }
+
+    // Method : tìm số lẻ trong list
+    public static List<Integer> getNumberIsOdd(List<Integer> numbers, Predicate<Integer> predicate) {
+        List<Integer> list = new ArrayList<>();
+        for (Integer n : numbers) {
+            if (predicate.test(n)) {
+                list.add(n);
+            }
+        }
+        return list;
     }
 }
