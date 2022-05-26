@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
-public class Test {
+public class DemoStreamExample {
     public static void main(String[] args) {
         List<Integer> numbers = List.of(10, 5, 3, 12, 6, 7, 5, 3);
 
