@@ -1,56 +1,54 @@
 ## Khóa học Java Core
 
-Danh sách lesson
-
-- Lesson1
+- **Lesson 1**
     - Viết chương trình đầu tiên
     - Khai báo biến, kiểu dữ liệu
     - Method
     - Math Class
-- Lesson2
+- **Lesson 2**
     - String
     - Enum
     - DateTime
     - Scanner
-- Lesson3
+- **Lesson 3**
     - Control Flow 
     - For Loop
-- Lesson4
+- **Lesson 4**
     - Array
     - Array2D
     - Menu terminal
     - Draw Shape
-- Lesson5
+- **Lesson 5**
     - Mini Test 1
-- Lesson6
+- **Lesson 6**
     - Class
     - Static keyword
     - This keyword
     - Builder Pattern
     - Demo Student
     - Demo Book
-- Lesson7
+- **Lesson 7**
     - Encapsulation (Tính đóng gói)
     - Inheritance (Tính kế thừa)
     - Access Modifire (Phạm vị truy cập)
     - Demo Movie
-- Lesson8
+- **Lesson 8**
     - ArrayList
     - Demo Player
     - Demo Products
     - Demo Employee
-- Lesson9
+- **Lesson 9**
     - Demo Student
     - Polymorphism (Tính đa hình)
     - Abstract Class
     - Interface
-- Lesson10
+- **Lesson 10**
     - Exception
     - Gson
     - Demo Book
-- Lesson11
+- **Lesson 11**
     - Mini Test 2
-- Lesson12
+- **Lesson 12**
     - List
     - Map
     - Set
@@ -58,9 +56,9 @@ Danh sách lesson
     - Comparable
     - Comperator
     - Collections Class
-- Lesson13
+- **Lesson 13**
     - Optional
     - Generic
-- Lesson14
-    - Lambda
-    - Stream API
+- **Lesson 14**
+    - [Lambda, Method Reference](./Lesson14/1Lambda/src/main/java/)
+    - [Stream API](./Lesson14/2StreamAPI/src/main/java/)
