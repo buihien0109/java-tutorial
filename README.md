@@ -1,64 +1,67 @@
 ## Khóa học Java Core
 
 - **Lesson 1**
-    - Viết chương trình đầu tiên
-    - Khai báo biến, kiểu dữ liệu
-    - Method
-    - Math Class
+    - [Khai báo biến, kiểu dữ liệu](./Lesson01/1HelloWorld/src/vn/techmaster/Main.java)
+    - [Method](./Lesson01/2Method/src/vn/techmaster/Main.java)
+    - [Math Class](./Lesson01/3MathObject/src/vn/techmaster/Main.java)
 - **Lesson 2**
-    - String
-    - Enum
-    - DateTime
-    - Scanner
+    - [String](./Lesson02/1String/src/vn/techmaster/Main.java)
+    - [Enum](./Lesson02/2Contant-Enum/src/vn/techmaster/)
+    - [DateTime](./Lesson02/3DateTime/src/vn/techmaster/)
+    - [Scanner](./Lesson02/4Scanner/src/vn/techmaster/)
+    - [Practice](./Lesson02/5Practice/src/vn/techmaster/)
 - **Lesson 3**
-    - Control Flow 
-    - For Loop
+    - [Control Flow](./Lesson03/1ControlFlow/src/vn/techmaster/)
+    - [For Loop](./Lesson03/1ControlFlow/src/vn/techmaster/)
 - **Lesson 4**
-    - Array
-    - Array2D
-    - Menu terminal
-    - Draw Shape
+    - [Array](./Lesson04/1Array/src/vn/techmaster/Array.java)
+    - [Array2D](./Lesson04/1Array/src/vn/techmaster/Array2D.java)
+    - [Loop Array](./Lesson04/1Array/src/vn/techmaster/LoopArray.java)
+    - [Menu terminal](./Lesson04/1Array/src/vn/techmaster/Menu.java)
+    - [Draw Shape](./Lesson04/1Array/src/vn/techmaster/PrintShape.java)
 - **Lesson 5**
-    - Mini Test 1
+    - [Mini Test 1](./Lesson05/README.md)
 - **Lesson 6**
-    - Class
-    - Static keyword
-    - This keyword
-    - Builder Pattern
-    - Demo Student
-    - Demo Book
+    - [Class](./Lesson06/1Person/src/vn/techmaster/classdemo/)
+    - [Static keyword](./Lesson06/1Person/src/vn/techmaster/staticdemo/)
+    - [This keyword](./Lesson06/1Person/src/vn/techmaster/thisdemo/)
+    - [Builder Pattern](./Lesson06/1Person/src/vn/techmaster/builderdemo/)
+    - [Demo Student](./Lesson06/2Student/src/vn/techmaster/)
+    - [Demo Book](./Lesson06/3Book/src/vn/techmaster/)
 - **Lesson 7**
-    - Encapsulation (Tính đóng gói)
-    - Inheritance (Tính kế thừa)
-    - Access Modifire (Phạm vị truy cập)
-    - Demo Movie
+    - [Encapsulation (Tính đóng gói)](./Lesson07/1Encapsulation/src/vn/techmaster/)
+    - [Inheritance (Tính kế thừa)](./Lesson07/3Inheritance/src/vn/techmaster/)
+    - [Access Modifire (Phạm vị truy cập)](./Lesson07/2AccessModifier/src/vn/techmaster/)
+    - [Demo Movie](./Lesson07/4Movie/src/main/java/vn/techmaster/)
 - **Lesson 8**
-    - ArrayList
-    - Demo Player
-    - Demo Products
-    - Demo Employee
+    - [ArrayList](./Lesson08/1ArrayList/src/main/java/)
+    - [Demo Player](./Lesson08/2Player/src/main/java/)
+    - [Demo Products](./Lesson08/2Products/src/main/java/)
+    - [Demo Employee](./Lesson08/3Employee/src/main/java/)
 - **Lesson 9**
-    - Demo Student
-    - Polymorphism (Tính đa hình)
-    - Abstract Class
-    - Interface
+    - [Demo Student](./Lesson09/1Student/src/main/java/vn/techmaster/)
+    - [Polymorphism (Tính đa hình)](./Lesson09/2Polymorphism/src/main/java/)
+    - [Abstract Class](./Lesson09/3Abstract/src/main/java/demo_abstract/)
+    - [Interface](./Lesson09/3Abstract/src/main/java/demo_interface/)
+    - [Upcasting](./Lesson09/4UpcastDownCast/src/main/java/upcast_demo/)
+    - [Downcasting](./Lesson09/4UpcastDownCast/src/main/java/downcast_demo/)
 - **Lesson 10**
-    - Exception
-    - Gson
-    - Demo Book
+    - [Exception](./Lesson10/1Exception/src/vn/techmaster/)
+    - [Thư viên Gson](./Lesson10/2Gson/src/main/java/vn/techmaster/)
+    - [Demo Book](./Lesson10/3Book/src/main/java/vn/techmaster/)
 - **Lesson 11**
-    - Mini Test 2
+    - [Mini Test 2](./Lesson11/Exam2/src/main/java/)
 - **Lesson 12**
-    - List
-    - Map
-    - Set
-    - Queue
-    - Comparable
-    - Comperator
-    - Collections Class
+    - [List](./Lesson12/1Collection/src/main/java/demo_list/)
+    - [Map](./Lesson12/1Collection/src/main/java/demo_map/)
+    - [Set](./Lesson12/1Collection/src/main/java/demo_set/)
+    - [Queue](./Lesson12/1Collection/src/main/java/demo_queue/)
+    - [Comparable](./Lesson12/1Collection/src/main/java/demo_comparable/)
+    - [Comperator](./Lesson12/1Collection/src/main/java/demo_comparator/)
+    - [Collections Class](./Lesson12/1Collection/src/main/java/demo_collections/DemoCollections.java)
 - **Lesson 13**
-    - Optional
-    - Generic
+    - [Optional](./Lesson13/1Optional/src/main/java/)
+    - [Generic](./Lesson13/2Generic/src/main/java/)
 - **Lesson 14**
     - [Lambda, Method Reference](./Lesson14/1Lambda/src/main/java/)
     - [Stream API](./Lesson14/2StreamAPI/src/main/java/)
